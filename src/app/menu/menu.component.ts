@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  welcomeMessage = 'Test';
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void{
   }
 
 }
