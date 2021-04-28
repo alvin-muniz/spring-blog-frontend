@@ -7,17 +7,21 @@ import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { MenuComponent } from './menu/menu.component';
 import {HttpClientModule} from '@angular/common/http';
 import {HelloWorldService} from './hello-world.service';
+import { UserFormComponent } from './user-form/user-form.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloWorldComponent,
-    MenuComponent
+    MenuComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     HelloWorldService
