@@ -5,7 +5,7 @@ import {HelloWorldComponent} from './hello-world/hello-world.component';
 
 
 const routes: Routes = [
-  {path: '', component: HelloWorldComponent},
+  // {path: '', component: HelloWorldComponent},
   {path: 'hello-world', component: HelloWorldComponent},
 ];
 
