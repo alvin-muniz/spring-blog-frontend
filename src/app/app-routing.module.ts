@@ -7,7 +7,7 @@ import {UserFormComponent} from './user-form/user-form.component';
 const routes: Routes = [
   // {path: '', component: HelloWorldComponent},
   {path: 'hello-world', component: HelloWorldComponent},
-  {path: 'user-form', component: UserFormComponent}
+  {path: 'register', component: UserFormComponent}
 ];
 
 @NgModule({

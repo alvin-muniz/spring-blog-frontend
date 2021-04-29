@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { MenuComponent } from './menu/menu.component';
 import {HttpClientModule} from '@angular/common/http';
-import {HelloWorldService} from './hello-world.service';
+import {HelloWorldService} from './service/hello-world.service';
 import { UserFormComponent } from './user-form/user-form.component';
 import {FormsModule} from '@angular/forms';
 

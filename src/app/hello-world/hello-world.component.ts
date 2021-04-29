@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {HelloWorldService} from '../hello-world.service';
+import {HelloWorldService} from '../service/hello-world.service';
 
 @Component({
   selector: 'app-hello-world',
