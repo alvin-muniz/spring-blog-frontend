@@ -7,6 +7,10 @@ if form state in a valid or invalid state-->
   <input placeholder="Password" name="password" [(ngModel)]="user.password"
 
   required/>
+  <pre>
+    {{form.value | json}}
+    {{form.valid | json}}
+  </pre>
 
 
 </form>
