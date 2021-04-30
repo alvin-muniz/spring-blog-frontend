@@ -3,16 +3,19 @@ import {HttpClient} from '@angular/common/http';
 import {Message} from '../../model/message';
 import {User} from '../../model/user/user';
 
+// replace with config value at some point
+const API_ENDPOINT = 'http://localhost:9092/auth/users/register';
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  BASE_URL = 'http://localhost:9092/auth/users/register';
-
+  // Reintegrate after form complete
   user: User = {
     id: 1,
-    name: 'Alvin',
+    username: 'Alvin',
     password: '123456',
     enabled: true
   };
@@ -21,14 +24,14 @@ export class UserService {
   }
 
   registerNewUser() {
-    this.http.post<User>(this.BASE_URL, this.user)
+    this.http.post<User>(API_ENDPOINT, this.user)
       .subscribe(results => {
         console.log(results.password);
-        console.log(results.name);
+        console.log(results.username);
       });
   }
 
   executeHelloWorldService() {
-    return this.http.get<Message>(this.BASE_URL);
+    return this.http.get<Message>(API_ENDPOINT);
   }
 }

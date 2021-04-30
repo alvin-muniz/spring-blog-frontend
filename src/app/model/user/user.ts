@@ -1,13 +1,13 @@
 export class User {
 
   id: number;
-  name: string;
+  username: string;
   password: string;
   enabled: boolean;
 
   constructor(name: string, password: string, enabled: boolean)
   {
-    this.name = name;
+    this.username = name;
     this.password = password;
     this.enabled = enabled;
   }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from '../service/user/user.service';
+import {User} from '../model/user/user';
 
 @Component({
   selector: 'app-user-form',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
+  // Empty object to bind to ensure functionality is working
+  user: User = {
+    id: 1,
+    username: 'Alvin',
+    password: '123456',
+    enabled: true
+  };
 
   ngOnInit(): void {
+  //  this.userService.registerNewUser();
   }
 
 }

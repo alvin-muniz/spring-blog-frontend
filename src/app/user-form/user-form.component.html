@@ -1,7 +1,12 @@
+<!--ngForm checks the data of the form but also the correctness of the form
+if form state in a valid or invalid state-->
 <form #form="ngForm">
 
-  <input placeholder="User Name" name="username" required/>
-  <input placeholder="Password" name="password" required/>
+  <input placeholder="User Name" name="username" [(ngModel)]="user.username"
+         required/>
+  <input placeholder="Password" name="password" [(ngModel)]="user.password"
+
+  required/>
 
 
 </form>
