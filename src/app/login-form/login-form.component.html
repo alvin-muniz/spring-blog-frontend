@@ -1,0 +1,17 @@
+<!--ngForm checks the data of the form but also the correctness of the form
+if form state in a valid or invalid state-->
+<h1>Login Form </h1>
+<div class="form-module">
+  <form #form="ngForm" (submit)="loginUser(loginRequest)">
+
+    <input placeholder="User Name" name="username" [(ngModel)]="loginRequest.username"
+           required/>
+    <input placeholder="Password" name="password" [(ngModel)]="loginRequest.password"
+           required/>
+    <button [disabled]="form.invalid" type="submit" >SUBMIT</button>
+    <pre>{{form.valid}}</pre>
+  </form>
+  <pre>hello</pre>
+  <pre>{{loginRequest | json}}</pre>
+
+</div>

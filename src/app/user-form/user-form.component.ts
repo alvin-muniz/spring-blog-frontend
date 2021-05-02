@@ -10,15 +10,9 @@ import {User} from '../model/user/user';
 export class UserFormComponent implements OnInit {
 
   constructor(private userService: UserService) { }
-  // Empty object to bind to ensure functionality is working
-  // user: User = {
-  //   id: 1,
-  //   username: 'Alvin',
-  //   password: '123456',
-  //   enabled: true
-  // };
 
   formUser: User = {
+    id: null,
     username: '',
     password: '',
     enabled: true
