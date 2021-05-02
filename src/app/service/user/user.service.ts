@@ -13,22 +13,18 @@ const API_ENDPOINT = 'http://localhost:9092/auth/users/register';
 export class UserService {
 
   // Reintegrate after form complete
-  user: User = {
-    id: 1,
-    username: 'Alvin',
-    password: '123456',
-    enabled: true
-  };
+  // user: User = {
+  //   id: 1,
+  //   username: 'Alvin',
+  //   password: '123456',
+  //   enabled: true
+  // };
 
   constructor(private http: HttpClient) {
   }
 
-  registerNewUser() {
-    this.http.post<User>(API_ENDPOINT, this.user)
-      .subscribe(results => {
-        console.log(results.password);
-        console.log(results.username);
-      });
+  registerNewUser(user: User) {
+    return this.http.post<User>(API_ENDPOINT, user);
   }
 
   executeHelloWorldService() {

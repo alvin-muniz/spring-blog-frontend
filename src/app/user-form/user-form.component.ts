@@ -11,15 +11,37 @@ export class UserFormComponent implements OnInit {
 
   constructor(private userService: UserService) { }
   // Empty object to bind to ensure functionality is working
-  user: User = {
-    id: 1,
-    username: 'Alvin',
-    password: '123456',
+  // user: User = {
+  //   id: 1,
+  //   username: 'Alvin',
+  //   password: '123456',
+  //   enabled: true
+  // };
+
+  formUser: User = {
+    username: '',
+    password: '',
     enabled: true
   };
 
   ngOnInit(): void {
   //  this.userService.registerNewUser();
+  }
+
+  registerUser(formUser){
+    console.log('user registered!');
+    this.userService.registerNewUser(formUser)
+      .subscribe(results => {
+        console.log(results.password);
+        console.log(results.username);
+        console.log(results);
+      });
+    this.clearUser();
+  }
+
+  clearUser() {
+    this.formUser.username = '';
+    this.formUser.password = '';
   }
 
 }
