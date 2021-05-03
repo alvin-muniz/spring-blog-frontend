@@ -10,6 +10,8 @@ import {HelloWorldService} from './service/hello-world.service';
 import { UserFormComponent } from './user-form/user-form.component';
 import {FormsModule} from '@angular/forms';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MaterialModule} from './material.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { LoginFormComponent } from './login-form/login-form.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [
     HelloWorldService

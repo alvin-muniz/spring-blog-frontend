@@ -3,11 +3,17 @@ if form state in a valid or invalid state-->
 <h1>Login Form </h1>
 <div class="form-module">
   <form #form="ngForm" (submit)="loginUser(loginRequest)">
+    <mat-form-field appearance="fill">
+      <mat-label>User Name</mat-label>
+      <input matInput placeholder="User Name" name="username" [(ngModel)]="loginRequest.username"
+             required/>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Password" name="password" [(ngModel)]="loginRequest.password"
+             required/>
+    </mat-form-field>
 
-    <input placeholder="User Name" name="username" [(ngModel)]="loginRequest.username"
-           required/>
-    <input placeholder="Password" name="password" [(ngModel)]="loginRequest.password"
-           required/>
     <button [disabled]="form.invalid" type="submit" >SUBMIT</button>
     <pre>{{form.valid}}</pre>
   </form>
